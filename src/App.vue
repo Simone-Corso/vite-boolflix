@@ -17,8 +17,9 @@ export default {
 <template>
   
     <AppHeader />
-    <AppAPI />
     <AppMainVue />
+    <AppAPI />
+    
 
 </template>
 
