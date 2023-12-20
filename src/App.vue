@@ -6,9 +6,10 @@ import AppMainVue from './components/AppMain.vue';
 
 export default {
   components: {
-    AppAPI,
     AppHeader,
     AppMainVue,
+    AppAPI,
+    
   },
 };
 </script>

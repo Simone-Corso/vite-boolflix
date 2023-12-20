@@ -1,6 +1,9 @@
 <template lang="">
-    <div>
-        
+    <div class='film'>
+        <div class="search">
+            <input type="text" placeholder='cerca il tuo film'>
+
+        </div>
     </div>
 </template>
 <script>
