@@ -5,11 +5,25 @@ import AppMainVue from './components/AppMain.vue';
 import axios from 'axios';
 
 export default {
+  data() {
+    return {
+      
+    }
+  },
+
+  methods: {
+    
+  },
+
   components: {
     AppHeader,
     AppMainVue,
     AppAPI,
     axios,
+    
+  },
+
+  created() {
     
   },
 };
