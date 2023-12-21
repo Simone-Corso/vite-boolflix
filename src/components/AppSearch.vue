@@ -1,23 +1,27 @@
 <template lang="">
     <div>
-       <input type="text" v-model="searchText">
-       <button @click="$emit('search', searchText)"="searchMovies"> search
-
-       </button>
+      <input type="text" v-model="searchText">
+      <button @click="search">Search</button>
     </div>
-</template>
-<script>
-export default {
+  </template>
+  <script>
+  export default {
     name: 'AppSearch',
-
+  
     data() {
-        return {
-            searchText: '',
-            
-        }
+      return {
+        searchText: '',
+      }
     },
-}
-</script>
-<style lang="">
+  
+    methods: {
+      search() {
+        this.$emit('search', this.searchText);
+      }
+    },
+  }
+  </script>
+  <style lang="">
     
-</style>
+  </style>
+  

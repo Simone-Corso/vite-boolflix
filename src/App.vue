@@ -11,19 +11,23 @@ export default {
     }
   },
 
-  methods: {
-    async getMovies(searchText) {
-      try {
-        
-        const response = await axios.get(`${searchText}`);
-        
-        
-        this.moviesList = response.data.results;
-      } catch (error) {
-        console.error('Error fetching movies:', error);
-      }
+methods: {
+  async getMovies(searchText) {
+    try {
+      const response = await axios.get('https://api.themoviedb.org/3/search/movie', {
+        params: {
+          api_key: '86c594eddf3a5367752cf671fefca365',
+          query: searchText,
+        },
+      });
+
+      this.moviesList = response.data.results;
+    } catch (error) {
+      console.error('Error fetching movies:', error);
     }
   },
+},
+
 
   components: {
     AppMain,
@@ -42,9 +46,10 @@ export default {
   <div>
     <AppHeader />
     <AppMain :movies="moviesList"/>
-    <AppAPI @search="getMovies" />
+    <AppSearch @search="getMovies" />
   </div>
 </template>
+ 
 
 <style scoped>
 
