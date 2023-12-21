@@ -1,7 +1,7 @@
 
 <template>
   <div>
-    <input type="text" v-model="searchText" @input="search" placeholder="Search">
+    <input type="text" v-model="searchText" @keyup.enter="search" @input="search" placeholder="Search">
     <button @click="search">Search</button>
     <div v-if="ilRisultato">
   Risultati: {{ searchText }}
