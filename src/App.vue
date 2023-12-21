@@ -14,7 +14,7 @@ export default {
   methods: {
 
     getMovies(searchText){
-      
+
     }
     
   },
@@ -28,6 +28,7 @@ export default {
   },
 
   created() {
+    this.getMovies()
     
   },
 };
