@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-    
+    name: 'AppMovie'
 }
 </script>
 <style lang="">
