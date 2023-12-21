@@ -7,6 +7,11 @@
         <img :src="movie.imageUrl" alt="Movie Poster">
         {{ movie.original_title }} {{ movie.languageFlag }}
       </div>
+      <div>
+        <span>
+          {{ movie.vote_average }}
+        </span>
+      </div>
     </div>
   </div>
 </template>
