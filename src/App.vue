@@ -1,44 +1,3 @@
-<script>
-import AppSearch from './components/AppSearch.vue';
-import AppHeader from './components/AppMain.vue';
-import AppMain from './components/AppMain.vue';
-import axios from 'axios';
-
-export default {
-  data() {
-    return {
-      moviesList: [],
-    }
-  },
-
-methods: {
-  async getMovies(searchText) {
-    try {
-      const response = await axios.get('https://api.themoviedb.org/3/search/movie', {
-        params: {
-          api_key: '86c594eddf3a5367752cf671fefca365',
-          query: searchText,
-        },
-      });
-
-      this.moviesList = response.data.results;
-    } catch (error) {
-      console.error('Error fetching movies:', error);
-    }
-  },
-},
-  components: {
-    AppMain,
-    AppSearch,
-    AppHeader,
-  },
-
-  created() {
-    
-    this.getMovies('');
-  },
-};
-</script>
 
 <template>
   <div>
@@ -47,7 +6,33 @@ methods: {
     <AppSearch @search="getMovies" />
   </div>
 </template>
- 
+
+<script>
+import AppSearch from './components/AppSearch.vue';
+import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
+
+export default {
+  data() {
+    return {
+      moviesList: [],
+    };
+  },
+  methods: {
+    getMovies(searchText) {
+      console.log('chiamata', searchText);
+    },
+  },
+  components: {
+    AppSearch,
+    AppMain,
+    AppHeader,
+  },
+  created() {
+    
+  },
+};
+</script>
 
 <style scoped>
 
