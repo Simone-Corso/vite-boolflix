@@ -7,36 +7,43 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      MoviesList: [],
+      moviesList: [],
     }
   },
 
   methods: {
-    getMovies(searchText) {
-      console.log('chiamata creata');
-      console.log(searchText);
-
+    async getMovies(searchText) {
+      try {
+        
+        const response = await axios.get(`${searchText}`);
+        
+        
+        this.moviesList = response.data.results;
+      } catch (error) {
+        console.error('Error fetching movies:', error);
+      }
     }
   },
 
   components: {
     AppMain,
     AppAPI,
+    AppHeader,
   },
 
   created() {
-    this.getMovies();
+    
+    this.getMovies('');
   },
 };
 </script>
 
-
 <template>
-  
+  <div>
     <AppHeader />
-    <AppMain :movies="MoviesList"/>
+    <AppMain :movies="moviesList"/>
     <AppAPI @search="getMovies" />
-    
+  </div>
 </template>
 
 <style scoped>
