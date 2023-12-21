@@ -7,7 +7,7 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      
+      MoviesList: [],
     }
   },
 
@@ -28,6 +28,7 @@ export default {
   },
 
   created() {
+    console.log('chiamata creata');
     this.getMovies()
     
   },
@@ -37,8 +38,8 @@ export default {
 <template>
   
     <AppHeader />
-    <AppMainVue />
-    <AppAPI />
+    <AppMain :movies="MoviesList"/>
+    <AppAPI @search="getMovies" />
     
 
 </template>
