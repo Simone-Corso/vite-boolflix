@@ -1,14 +1,14 @@
 <template lang="">
     <div>
        <input type="text" v-model="searchText">
-       <button @click="$emit('search', searchText)" @keyup.enter="searchMovies"> search
+       <button @click="$emit('search', searchText)"="searchMovies"> search
 
        </button>
     </div>
 </template>
 <script>
 export default {
-    name: 'AppAPI',
+    name: 'AppSearch',
 
     data() {
         return {

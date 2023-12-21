@@ -1,5 +1,5 @@
 <script>
-import AppAPI from './components/AppAPI.vue';
+import AppSearch from './components/AppSearch.vue';
 import AppHeader from './components/AppMain.vue';
 import AppMain from './components/AppMain.vue';
 import axios from 'axios';
@@ -27,7 +27,7 @@ export default {
 
   components: {
     AppMain,
-    AppAPI,
+    AppSearch,
     AppHeader,
   },
 
