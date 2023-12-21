@@ -1,10 +1,11 @@
 <template>
-  <div class="search">
+  <div>
     <input type="text" v-model="searchText" @keyup.enter="search" @input="search" placeholder="Search">
     <button @click="search">Search</button>
     <div v-if="ilRisultato">
-    <div v-for="movie in moviesList" :key="movie.id">
-         {{ movie.original_title }} {{ movie.languageFlag }}
+      <div v-for="movie in moviesList" :key="movie.id">
+        <img :src="movie.imageUrl" alt="Movie Poster">
+        {{ movie.original_title }} {{ movie.languageFlag }}
       </div>
     </div>
   </div>
