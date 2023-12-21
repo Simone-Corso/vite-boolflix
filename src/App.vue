@@ -27,8 +27,6 @@ methods: {
     }
   },
 },
-
-
   components: {
     AppMain,
     AppSearch,

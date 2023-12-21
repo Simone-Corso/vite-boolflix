@@ -1,7 +1,8 @@
 <template lang="">
     <div>
       <input type="text" v-model="searchText">
-      <button @click="search">Search</button>
+      <button @click="search">search</button>
+
     </div>
   </template>
   <script>
