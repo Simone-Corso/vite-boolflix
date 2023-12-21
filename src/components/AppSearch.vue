@@ -18,6 +18,7 @@ const languageFlagMap = {
   en: '🇺🇸',
   es: '🇪🇸',
   fr: '🇫🇷',
+  
 };
 
 export default {
@@ -32,13 +33,14 @@ export default {
     search() {
       this.$emit('search', this.searchText);
 
-     
+      
       axios.get('https://api.themoviedb.org/3/search/movie?api_key=86c594eddf3a5367752cf671fefca365&query=' + this.searchText)
         .then((response) => {
           console.log(response);
           this.moviesList = response.data.results.map((movie) => ({
             ...movie,
             languageFlag: this.getLanguageFlag(movie.original_language),
+            imageUrl: 'https://image.tmdb.org/t/p/w342/' + movie.poster_path,
           }));
           this.ilRisultato = true;
         })
@@ -46,14 +48,13 @@ export default {
           console.log(error);
         });
 
-      
       axios.get('https://api.themoviedb.org/3/search/tv?api_key=86c594eddf3a5367752cf671fefca365&query=' + this.searchText)
         .then((response) => {
           console.log(response);
-          
           this.moviesList = this.moviesList.concat(response.data.results.map((serie) => ({
             ...serie,
             languageFlag: this.getLanguageFlag(serie.original_language),
+            imageUrl: 'https://image.tmdb.org/t/p/w500/' + serie.poster_path,
           })));
           this.ilRisultato = true;
         })
@@ -70,15 +71,4 @@ export default {
 </script>
 
 <style scoped>
-
-.search{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-wrap: wrap;
-}
-
 </style>
-
-
-  
