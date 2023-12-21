@@ -9,7 +9,6 @@
       </div>
       <div>
         <span>
-          {{ movie.vote_average }}
         </span>
       </div>
     </div>
