@@ -1,7 +1,7 @@
 <script>
 import AppAPI from './components/AppAPI.vue';
 import AppHeader from './components/AppHeader.vue';
-import AppMainVue from './components/AppMain.vue';
+import AppMain from './components/AppMain.vue';
 import axios from 'axios';
 
 export default {
@@ -12,28 +12,24 @@ export default {
   },
 
   methods: {
-
-    getMovies(searchText){
+    getMovies(searchText) {
+      console.log('chiamata creata');
+      console.log(searchText);
 
     }
-    
   },
 
   components: {
-    AppHeader,
-    AppMainVue,
+    AppMain,
     AppAPI,
-    axios,
-    
   },
 
   created() {
-    console.log('chiamata creata');
-    this.getMovies()
-    
+    this.getMovies();
   },
 };
 </script>
+
 
 <template>
   
@@ -41,7 +37,6 @@ export default {
     <AppMain :movies="MoviesList"/>
     <AppAPI @search="getMovies" />
     
-
 </template>
 
 <style scoped>
