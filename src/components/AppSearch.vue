@@ -91,7 +91,7 @@ export default {
 <style scoped>
   h1 {
     color: white;
-    margin: 0; /* Rimuovi il margine predefinito del titolo */
+    margin: 0; 
   }
 
   .container-header {
@@ -100,25 +100,26 @@ export default {
     align-items: center;
     background-color: black;
     height: 75px;
+    padding: 0 20px;
   }
 
-  .search-bar {
+  .container-cards {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
   }
 
   .card {
     position: relative;
+    flex: 1; 
     margin: 10px;
     cursor: pointer;
   }
 
   .card img {
-    width: calc(100% / 3);
+    width: 100%;
     height: auto;
-    display: flex;
-    flex-wrap: wrap;
   }
 
   .descrizione {
@@ -126,7 +127,7 @@ export default {
     color: white;
     top: 0;
     left: 0;
-    width: calc(100% / 3);
+    width: 100%;
     height: 100%;
     background-color: black;
     display: flex;
@@ -141,3 +142,4 @@ export default {
     opacity: 1;
   }
 </style>
+
