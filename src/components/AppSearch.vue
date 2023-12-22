@@ -5,7 +5,10 @@
     <div v-if="ilRisultato">
       <div v-for="movie in moviesList" :key="movie.id">
         <img :src="movie.imageUrl" alt="Movie Poster">
-        {{ movie.original_title }} {{ movie.languageFlag }}
+        <span>Titolo Originale: {{ movie.original_title }} </span><br>
+        <span>Lingua:{{ movie.languageFlag }}</span><br>
+        <span>Titolo: {{ movie.title }} </span><br>
+        <span>Voto: {{ movie.vote_average }}</span><br>
       </div>
       <div>
         <span>
