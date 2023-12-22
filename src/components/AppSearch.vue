@@ -1,7 +1,8 @@
 <template>
   <header>
   <div class="search-bar">
-    <input type="text" v-model="searchText" @keyup.enter="search" @input="search" placeholder="Search">
+    <h1>Boolflix</h1>
+    <input type="text" v-model="searchText" @keyup.enter="search" @input="search" placeholder="Search" class="placeholder">
     <button @click="search">Search</button>
   </div>
   </header>
@@ -85,9 +86,14 @@ export default {
 
 <style scoped>
 
+h1{
+  color: white;
+}
+
+
 .search-bar{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: black;
   height: 75px;
