@@ -7,7 +7,7 @@
   </div>
   </header>
   <main>
-  <div>
+  <div class="container-cards">
     <div v-if="ilRisultato">
       <div v-for="movie in moviesList" :key="movie.id" class="card">
         <img :src="movie.imageUrl" alt="Movie Poster">
@@ -90,6 +90,9 @@ h1{
   color: white;
 }
 
+.container-cards{
+}
+
 
 .search-bar{
   display: flex;
@@ -104,7 +107,7 @@ h1{
   opacity: 0;
 }
 .card{
-  position: relative;
+
 }
 
 .card:hover .descrizione{
