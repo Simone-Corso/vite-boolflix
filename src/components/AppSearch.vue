@@ -94,6 +94,10 @@ export default {
     margin: 0; 
   }
 
+  main{
+    background-color: #434343;
+  }
+
   .container-header {
     display: flex;
     justify-content: space-between;
@@ -120,6 +124,7 @@ export default {
   .card img {
     width: 100%;
     height: auto;
+    border-color: white;
   }
 
   .descrizione {
