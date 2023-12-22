@@ -85,35 +85,53 @@ export default {
 </script>
 
 <style scoped>
+  h1 {
+    color: white;
+  }
 
-h1{
-  color: white;
-}
+  .container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 
-.container-cards{
-}
+  .search-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 75px;
+    padding: 0 20px;
+  }
 
+  .card {
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+  }
 
-.search-bar{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: black;
-  height: 75px;
-}
-.descrizione{
-  transition: opacity 0.3s;
-  width: 100%;
-  opacity: 0;
-}
-.card{
+  .card img {
+    width: 100%;
+    height: auto;
+  }
 
-}
+  .descrizione {
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
 
-.card:hover .descrizione{
-  opacity: 1;
-  display: block;
-}
-
+  .card:hover .descrizione {
+    opacity: 1;
+  }
 </style>
-
