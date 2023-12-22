@@ -8,7 +8,7 @@
   <main>
   <div>
     <div v-if="ilRisultato">
-      <div v-for="movie in moviesList" :key="movie.id">
+      <div v-for="movie in moviesList" :key="movie.id" class="card">
         <img :src="movie.imageUrl" alt="Movie Poster">
         <div class="descrizione">
         <span>Titolo Originale: {{ movie.original_title }}</span><br>
