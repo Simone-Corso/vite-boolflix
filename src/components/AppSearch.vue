@@ -119,12 +119,12 @@ export default {
     flex: 1; 
     margin: 10px;
     cursor: pointer;
+    border: solid 2px white;
   }
 
   .card img {
     width: 100%;
     height: auto;
-    border-color: white;
   }
 
   .descrizione {
