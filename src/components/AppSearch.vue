@@ -84,4 +84,18 @@ export default {
 </script>
 
 <style scoped>
+
+.descrizione{
+  transition: opacity 0.3s;
+  width: 100%;
+  opacity: 0;
+}
+.card{
+  position: relative;
+}
+
+.card:hover .descrizione{
+  opacity: 1;
+  display: block;
+}
 </style>
