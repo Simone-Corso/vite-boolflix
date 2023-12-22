@@ -1,9 +1,13 @@
 <template>
   <header>
-  <div class="search-bar">
+    <div class="container-header">
+    <div class="container-title">
     <h1>Boolflix</h1>
+  </div>
+  <div class="container-search">
     <input type="text" v-model="searchText" @keyup.enter="search" @input="search" placeholder="Search" class="placeholder">
     <button @click="search">Search</button>
+  </div>
   </div>
   </header>
   <main>
@@ -87,21 +91,21 @@ export default {
 <style scoped>
   h1 {
     color: white;
+    margin: 0; /* Rimuovi il margine predefinito del titolo */
   }
 
-  .container-cards {
+  .container-header {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    height: 75px;
   }
 
   .search-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
-    height: 75px;
-    padding: 0 20px;
   }
 
   .card {
@@ -111,8 +115,10 @@ export default {
   }
 
   .card img {
-    width: 100%;
+    width: calc(100% / 3);
     height: auto;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .descrizione {
@@ -120,7 +126,7 @@ export default {
     color: white;
     top: 0;
     left: 0;
-    width: 100%;
+    width: calc(100% / 3);
     height: 100%;
     background-color: black;
     display: flex;
