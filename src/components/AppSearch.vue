@@ -1,7 +1,12 @@
 <template>
+  <header>
   <div>
     <input type="text" v-model="searchText" @keyup.enter="search" @input="search" placeholder="Search">
     <button @click="search">Search</button>
+  </div>
+  </header>
+  <main>
+  <div>
     <div v-if="ilRisultato">
       <div v-for="movie in moviesList" :key="movie.id">
         <img :src="movie.imageUrl" alt="Movie Poster">
@@ -11,12 +16,9 @@
         <span>Voto: {{ movie.vote_average }}</span><br>
         <span>Overview: {{ movie.overview }}</span>
       </div>
-      <div>
-        <span>
-        </span>
-      </div>
     </div>
   </div>
+</main>
 </template>
 
 <script>
