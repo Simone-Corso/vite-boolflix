@@ -1,6 +1,6 @@
 <template>
   <header>
-  <div>
+  <div class="search-bar">
     <input type="text" v-model="searchText" @keyup.enter="search" @input="search" placeholder="Search">
     <button @click="search">Search</button>
   </div>
@@ -85,6 +85,13 @@ export default {
 
 <style scoped>
 
+.search-bar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 75px;
+}
 .descrizione{
   transition: opacity 0.3s;
   width: 100%;
@@ -98,4 +105,6 @@ export default {
   opacity: 1;
   display: block;
 }
+
 </style>
+
